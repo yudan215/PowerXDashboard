@@ -158,16 +158,16 @@
             {{ userStore.name }}
           </a-avatar>
           <template #content>
+            <!--            <a-doption>-->
+            <!--              <a-space @click="$router.push({ name: 'Info' })">-->
+            <!--                <icon-user />-->
+            <!--                <span>-->
+            <!--                  {{ $t('messageBox.userCenter') }}-->
+            <!--                </span>-->
+            <!--              </a-space>-->
+            <!--            </a-doption>-->
             <a-doption>
-              <a-space @click="$router.push({ name: 'Info' })">
-                <icon-user />
-                <span>
-                  {{ $t('messageBox.userCenter') }}
-                </span>
-              </a-space>
-            </a-doption>
-            <a-doption>
-              <a-space @click="$router.push({ name: 'Setting' })">
+              <a-space @click="$router.push({ name: 'UserSetting' })">
                 <icon-settings />
                 <span>
                   {{ $t('messageBox.userSettings') }}

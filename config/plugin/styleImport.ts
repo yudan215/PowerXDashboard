@@ -4,6 +4,7 @@
  * https://github.com/anncwb/vite-plugin-style-import
  */
 
+// @ts-nocheck
 import styleImport from 'vite-plugin-style-import';
 
 export default function configStyleImportPlugin() {
