@@ -7,10 +7,11 @@ const User: AppRouteRecordRaw = {
   component: DEFAULT_LAYOUT,
   redirect: '/user/setting',
   meta: {
-    order: -1,
     locale: 'menu.user',
     requiresAuth: true,
     icon: 'icon-user',
+    hideInMenu: true,
+    hideChildrenInMenu: true,
   },
   children: [
     {
@@ -19,7 +20,17 @@ const User: AppRouteRecordRaw = {
       component: () => import('@/views/user/setting/index.vue'),
       meta: {
         icon: 'icon-settings',
-        locale: 'menu.userSettings',
+        locale: 'menu.user.userSettings',
+        requiresAuth: true,
+        roles: ['*'],
+      },
+    },
+    {
+      path: '/user/setting/oauth2/:type/redirect',
+      name: 'Oauth2Redirect',
+      component: () => import('@/views/user/setting/oauth2/index.vue'),
+      meta: {
+        locale: 'menu.user.oauth2Redirect',
         requiresAuth: true,
         roles: ['*'],
       },

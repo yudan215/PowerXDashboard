@@ -27,6 +27,10 @@ export default function useMenuTree() {
           return null;
         }
 
+        if (element.meta?.hideInMenu === true) {
+          return null;
+        }
+
         // leaf node
         if (element.meta?.hideChildrenInMenu || !element.children) {
           element.children = [];

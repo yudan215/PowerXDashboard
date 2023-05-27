@@ -19,6 +19,8 @@ export default {
   'menu.visualization': '数据可视化',
   'menu.profile': '详情页',
   'menu.user': '个人中心',
+  'menu.user.userSettings': '用户设置',
+  'menu.user.oauth2Redirect': 'OAuth2授权',
   'menu.arcoWebsite': 'Arco Design',
   'menu.faq': '常见问题',
   'navbar.docs': '文档中心',

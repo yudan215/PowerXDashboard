@@ -8,9 +8,7 @@
         <a-button v-else type="primary" @click="bindPhoneNumber">绑定</a-button>
       </a-form-item>
       <a-form-item label="微信" field="wechat">
-        <span v-if="formModel.wechat !== ''">{{
-          formModel.wechat
-        }}</span>
+        <span v-if="formModel.wechat !== ''">{{ formModel.wechat }}</span>
         <a-button v-else type="primary" @click="bindWechat"
           >绑定</a-button
         ></a-form-item
@@ -19,7 +17,9 @@
         <span v-if="formModel.enterpriseWechat !== ''">{{
           formModel.enterpriseWechat
         }}</span>
-        <a-button v-else type="primary" @click="bindEnterpriseWechat">绑定</a-button>
+        <a-button v-else type="primary" @click="bindEnterpriseWechat"
+          >绑定</a-button
+        >
       </a-form-item>
     </a-form>
   </div>
@@ -69,11 +69,14 @@
 
   const bindEnterpriseWechat = () => {
     getWeWorkOAuth2Url({
-      redirectUri: 'http://localhost:8080',
+      // todo setting domain
+      redirectUri:
+        'http://michael.debug.artisancloud.cn:5173/user/setting/oauth2/wework/redirect',
       // todo handle state
       state: '123',
     }).then((res) => {
-      openOAuth2AuthenticationWindow(res.data.url);
+      // open url
+      window.location.href = res.data.url;
     });
   };
 </script>
