@@ -1,4 +1,10 @@
-<template> </template>
+<template>
+  <div class="container">
+    <a-card>
+
+    </a-card>
+  </div>
+</template>
 
 <script>
   export default {

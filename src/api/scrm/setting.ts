@@ -14,3 +14,19 @@ export function associateWeWorkAccount(request: AssociateWeWorkAccountRequest) {
     request
   );
 }
+
+export interface SyncWeWorkEmployeeReply {
+  status: string;
+}
+
+export function syncWeWorkEmployee() {
+  return axios.post<SyncWeWorkEmployeeReply>(
+    '/api/v1/admin/scrm/setting/userinfo/actions/sync-wework-employee'
+  );
+}
+
+export interface SyncWeWorkCustomerReply {
+  status: string;
+}
+
+
